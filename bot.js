@@ -868,7 +868,7 @@ client.on('message', PuP => {
 
 client.on('ready', function(){
     var ms = 10000 ;
-    var setGame = [' -help',`Im on ${client.guilds.size} servers`,`i help ${client.users.size} Members`,' BAD Is The Best ','Just Do It'];
+    var setGame = [' -help',`Im on ${client.guilds.size} servers`,`i help ${client.users.size} Members`,' ArtBot Pirme Is The Best '];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -879,7 +879,7 @@ client.on('ready', function(){
             j = -1;
         }
         i = i+j;
-        client.user.setGame(setGame[i],`http://www.twitch.tv/blu4egam3r`);
+        client.user.setGame(setGame[i],`https://discord.gg/d2ZBvp`);
     }, ms);
   console.log(`Logged in as ${client.user.tag}!`);
   console.log('')
