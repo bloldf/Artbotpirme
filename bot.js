@@ -3679,6 +3679,7 @@ reaction2.on("collect", r => {
 『-mutechannel ====> تقفيل الشات
 『-unmutechannel ====> فتح الشات
 『 By ====> RKS | F_L_S_T_I_N#7302
+https://discordapp.com/api/oauth2/authorize?client_id=622777290211721236&permissions=0&scope=bot
 **
 `)
    message.author.sendEmbed(embed)
