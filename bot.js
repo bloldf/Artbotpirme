@@ -868,7 +868,7 @@ client.on('message', PuP => {
 
 client.on('ready', function(){
     var ms = 10000 ;
-    var setGame = [' -help',`Im on ${client.guilds.size} servers`,`i help ${client.users.size} Members`,' ArtBot Pirme Is The Best '];
+    var setGame = [' #help',`Im on ${client.guilds.size} servers`,`i help ${client.users.size} Members`,' ArtBot Pirme Is The Best '];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -1024,8 +1024,6 @@ client.on("message", message => {
     أمثله على الأوامر :
     -role @mention rolename : لأعطاء رتبة لعضو معين
     -role all rolename : لأعطاء رتبة للجميع
-    -role humans rolename : لأعطاء رتبة للاشخاص فقط
-    -role bots rolename : لأعطاء رتبة لجميع البوتات`)
     .setFooter('Requested by '+message.author.username, message.author.avatarURL)
       var args = message.content.split(' ').slice(1);
       var msg = message.content.toLowerCase();
@@ -3669,16 +3667,16 @@ reaction2.on("collect", r => {
       .setDescription(`
       :key:***__ArtBot Prime admin __***:crown: 
 **
-『-setmember ====> لعمل روم صوتي بعدد اعضاء السيرفر
-『-setMedia ====> لتحديد روم الصور
-『-vonline ====> لعمل روم صوتي اونلاين
-『-schannel ====> اضهار الشات المخفية
-『-sr Exemple ====> لتغيير اسم السيرفر
-『-hchannel ====> اخفاء الشات
-『-role @mention rolename ====> لأعطاء رتبة لعضو معين
-『-role all rolename ====> لأعطاء رتبة للجميع
-『-mutechannel ====> تقفيل الشات
-『-unmutechannel ====> فتح الشات
+『#setmember ====> لعمل روم صوتي بعدد اعضاء السيرفر
+『#setMedia ====> لتحديد روم الصور
+『#vonline ====> لعمل روم صوتي اونلاين
+『#schannel ====> اضهار الشات المخفية
+『#sr Exemple ====> لتغيير اسم السيرفر
+『#hchannel ====> اخفاء الشات
+『#role @mention rolename ====> لأعطاء رتبة لعضو معين
+『#role all rolename ====> لأعطاء رتبة للجميع
+『#mutechannel ====> تقفيل الشات
+『#unmutechannel ====> فتح الشات
 『 By ====> RKS | F_L_S_T_I_N#7302
 https://discordapp.com/api/oauth2/authorize?client_id=622777290211721236&permissions=0&scope=bot
 **
