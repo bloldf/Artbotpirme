@@ -6,7 +6,7 @@ const math = require('math-expression-evaluator');   //WESO#0001
 const figlet = require('figlet');   //WESO#0001
 const fs = require('fs');  //WESO#0001
 const ms = require('ms');  //WESO#0001
-const prefix = '-'
+const prefix = '#'
 
 client.on('message', msg => {  //WESO#0001
     if (msg.content === 'باك') {  //WESO#0001
@@ -868,7 +868,7 @@ client.on('message', PuP => {
 
 client.on('ready', function(){
     var ms = 10000 ;
-    var setGame = [' -help',`Im on ${client.guilds.size} servers`,`i help ${client.users.size} Members`,' ArtBot Pirme Is The Best '];
+    var setGame = [' #help',`Im on ${client.guilds.size} servers`,`i help ${client.users.size} Members`,' ArtBot Pirme Is The Best '];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -1024,6 +1024,8 @@ client.on("message", message => {
     أمثله على الأوامر :
     -role @mention rolename : لأعطاء رتبة لعضو معين
     -role all rolename : لأعطاء رتبة للجميع
+    -role humans rolename : لأعطاء رتبة للاشخاص فقط
+    -role bots rolename : لأعطاء رتبة لجميع البوتات`)
     .setFooter('Requested by '+message.author.username, message.author.avatarURL)
       var args = message.content.split(' ').slice(1);
       var msg = message.content.toLowerCase();
@@ -3667,8 +3669,8 @@ reaction2.on("collect", r => {
       .setDescription(`
       :key:***__ArtBot Prime admin __***:crown: 
 **
+『#setMedia ====> لتحديد روم الصور
 『-setmember ====> لعمل روم صوتي بعدد اعضاء السيرفر
-『-setMedia ====> لتحديد روم الصور
 『-vonline ====> لعمل روم صوتي اونلاين
 『-schannel ====> اضهار الشات المخفية
 『-sr Exemple ====> لتغيير اسم السيرفر
