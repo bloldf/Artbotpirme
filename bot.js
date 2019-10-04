@@ -868,7 +868,7 @@ client.on('message', PuP => {
 
 client.on('ready', function(){
     var ms = 10000 ;
-    var setGame = [' -help',`Im on ${client.guilds.size} servers`,`i help ${client.users.size} Members`,' ArtBot Pirme Is The Best '];
+    var setGame = [' #help',`Im on ${client.guilds.size} servers`,`i help ${client.users.size} Members`,' ArtBot Pirme Is The Best '];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -3617,7 +3617,7 @@ client.on('message', message => {
 
 
   client.on("message", function(message) {
-    var prefix = "-";
+    var prefix = "#";
    if(message.content.startsWith(prefix + "help")) {
     let messageArgs = message.content.split(" ").slice(1).join(" ");
     let messageRPS = message.content.split(" ").slice(2).join(" ");
