@@ -3670,16 +3670,16 @@ reaction2.on("collect", r => {
       :key:***__ArtBot Prime admin __***:crown: 
 **
 『#setMedia ====> لتحديد روم الصور
-『-setmember ====> لعمل روم صوتي بعدد اعضاء السيرفر
-『-vonline ====> لعمل روم صوتي اونلاين
-『-schannel ====> اضهار الشات المخفية
-『-sr Exemple ====> لتغيير اسم السيرفر
-『-hchannel ====> اخفاء الشات
-『-role @mention rolename ====> لأعطاء رتبة لعضو معين
-『-role all rolename ====> لأعطاء رتبة للجميع
-『-mutechannel ====> تقفيل الشات
-『-unmutechannel ====> فتح الشات
-『 By ====> RKS | F_L_S_T_I_N#7302
+『#setmember ====> لعمل روم صوتي بعدد اعضاء السيرفر
+『#vonline ====> لعمل روم صوتي اونلاين
+『#schannel ====> اضهار الشات المخفية
+『#sr Exemple ====> لتغيير اسم السيرفر
+『#hchannel ====> اخفاء الشات
+『#role @mention rolename ====> لأعطاء رتبة لعضو معين
+『#role all rolename ====> لأعطاء رتبة للجميع
+『#mutechannel ====> تقفيل الشات
+『#unmutechannel ====> فتح الشات
+『 Help bot link 
 https://discordapp.com/api/oauth2/authorize?client_id=622777290211721236&permissions=0&scope=bot
 **
 `)
