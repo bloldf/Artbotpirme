@@ -37,7 +37,7 @@ client.on('message', msg => {  //WESO#0001
 
   
    client.on('message', msg => {  //WESO#0001
-    if (msg.content === 'هلا') {  //WESO#0001
+    if (msg.content === 'HI PROS') {  //WESO#0001
       msg.reply('**هلا بيك :heart: **');  //WESO#0001
     }
   });
