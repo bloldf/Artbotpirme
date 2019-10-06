@@ -907,7 +907,7 @@ client.on('ready', function(){
 
 
 client.on('message', message => {
-var prefix = "-";
+var prefix = "#";
       if(message.content === prefix + "hchannel") {
       if(!message.channel.guild) return;
       if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply('You Dont Have Perms :x:');
@@ -919,7 +919,7 @@ var prefix = "-";
 });
 
 client.on('message',async Epic => {
-  var prefix = "-" ;
+  var prefix = "#" ;
   if(Epic.content.startsWith(prefix + "vonline")) {
   if(!Epic.guild.member(Epic.author).hasPermissions('MANAGE_CHANNELS')) return Epic.reply(':x: **I Dont Have Permissions**');
     message.channel.send('✅| **تم عمل الروم بنجاح**');
