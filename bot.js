@@ -2235,9 +2235,9 @@ if(!m1) return message.reply(`**الأيدي هذا غير صحيح \`${attentio
       message.channel.send(`**هل تريد إرسال في روم <#${attentions[message.guild.id]['id']}>
 ${attentions[message.guild.id]['msg']}**`).then(msge => {
       msge.react('✅').then( r => {
-      msge.react('❌')
+      msge.react(':556187731231768577:')
       const oneFilterBB = (reaction, user) => reaction.emoji.name === '✅' && user.id === message.author.id;
-      const threeFilterBB = (reaction, user) => reaction.emoji.name === '❌' && user.id === message.author.id;
+      const threeFilterBB = (reaction, user) => reaction.emoji.name === ':556187731231768577:' && user.id === message.author.id;
       const oneBY = msge.createReactionCollector(oneFilterBB, {maxMatches : 1,time : 400000,});
       const threeBY = msge.createReactionCollector(threeFilterBB, {maxMatches : 1,time : 400000,});
       oneBY.on('collect', r => {
@@ -3049,7 +3049,7 @@ client.on('message' , message => {
     ;
     let user = message.mentions.users.first()|| client.users.get(message.content.split(' ')[1])
     if(message.content.startsWith(prefix + 'unban')) {
-        if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('❌|**\`ADMINISTRATOR\`لا توجد لديك رتبة`**');
+        if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send(':556187731231768577:|**\`ADMINISTRATOR\`لا توجد لديك رتبة`**');
         if(!user) return  message.channel.send(`Do this ${prefix} <@ID user> \n or \n ${prefix}unban ID user`);
         message.guild.unban(user);
         message.guild.owner.send(`لقد تم فك الباند عن الشخص \n ${user} \n By : <@${message.author.id}>`)
@@ -4017,11 +4017,11 @@ let copy = "ArtBot Pirme";
 let request = `Requested By ${message.author.username}`;
 if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
 msg.react('✅')
-.then(() => msg.react('❌'))
+.then(() => msg.react(':556187731231768577:'))
 .then(() =>msg.react('✅'))
 
 let reaction1Filter = (reaction, user) => reaction.emoji.name === '✅' && user.id === message.author.id;
-let reaction2Filter = (reaction, user) => reaction.emoji.name === '❌' && user.id === message.author.id;
+let reaction2Filter = (reaction, user) => reaction.emoji.name === ':556187731231768577:' && user.id === message.author.id;
 let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
 let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
 reaction1.on("collect", r => {
