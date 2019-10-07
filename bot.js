@@ -1834,7 +1834,7 @@ client.on('voiceStateUpdate', (voiceOld, voiceNew) => {
 
 
 client.on("message", msg => {
-  if(msg.content === '-' + "id") {
+  if(msg.content === '#' + "id") {
       const embed = new Discord.RichEmbed();
   embed.addField("🔱| اسم الحساب :", `${msg.author.username}#${msg.author.discriminator}`, true)
           .addField("🆔| الاي دي :", `${msg.author.id}`, true)
@@ -3092,7 +3092,7 @@ client.on('typingStart', (ch, user) => {
    
    client.on('message', message => {
      if(!message.channel.guild) return;
-var prefix = "-";
+var prefix = "#";
                 if(message.content.startsWith(prefix + 'allbots')) {
 
     
@@ -3113,7 +3113,7 @@ message.channel.send(embed)
 });
    
    client.on('message', message => {
-	var prefix = "-";
+	var prefix = "#";
     if(message.content.startsWith(prefix + 'mvall')) {
      if (!message.member.hasPermission("MOVE_MEMBERS")) return message.channel.send('**:x: You Dont Have Perms `MOVE_MEMBERS`**');
        if(!message.guild.member(client.user).hasPermission("MOVE_MEMBERS")) return message.reply("**:x: I Dont Have Perms `MOVE_MEMBERS`**");
@@ -3130,7 +3130,7 @@ message.channel.send(embed)
        });
    
    client.on('message' , message => {
-  var prefix = "-";
+  var prefix = "#";
   if(message.author.bot) return;
  
   if(message.content.startsWith(prefix + "xo")) {
@@ -3195,7 +3195,7 @@ message.channel.send(embed)
  });
    
    client.on('message', msg => {
-	var  prefix = "-";
+	var  prefix = "#";
  if (msg.content.startsWith(prefix + 'cal')) {
     let args = msg.content.split(" ").slice(1);
         const question = args.join(' ');
@@ -3217,7 +3217,7 @@ message.channel.send(embed)
 });
    
    client.on('message', omar => {
-var prefix = "-";
+var prefix = "#";
 if(omar.content.split(' ')[0] == prefix + 'dc') {  
 if (!omar.channel.guild) return;
 if(!omar.guild.member(omar.author).hasPermission("MANAGE_CHANNELS")) return omar.reply("**You Don't Have ` MANAGE_CHANNELS ` Permission**");
