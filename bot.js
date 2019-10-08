@@ -6,7 +6,7 @@ const math = require('math-expression-evaluator');   //WESO#0001
 const figlet = require('figlet');   //WESO#0001
 const fs = require('fs');  //WESO#0001
 const ms = require('ms');  //WESO#0001
-const prefix = '#'
+const prefix = '-'
 
 client.on('message', msg => {  //WESO#0001
     if (msg.content === 'باك') {  //WESO#0001
@@ -37,7 +37,7 @@ client.on('message', msg => {  //WESO#0001
 
   
    client.on('message', msg => {  //WESO#0001
-    if (msg.content === 'HI PROS') {  //WESO#0001
+    if (msg.content === 'هلا') {  //WESO#0001
       msg.reply('**هلا بيك :heart: **');  //WESO#0001
     }
   });
@@ -868,7 +868,7 @@ client.on('message', PuP => {
 
 client.on('ready', function(){
     var ms = 10000 ;
-    var setGame = [' #help',`Im on ${client.guilds.size} servers`,`i help ${client.users.size} Members`,' ArtBot Pirme Is The Best '];
+    var setGame = [' -help',`Im on ${client.guilds.size} servers`,`i help ${client.users.size} Members`,' BAD Is The Best ','Just Do It'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -879,7 +879,7 @@ client.on('ready', function(){
             j = -1;
         }
         i = i+j;
-        client.user.setGame(setGame[i],`https://discord.gg/d2ZBvp`);
+        client.user.setGame(setGame[i],`http://www.twitch.tv/blu4egam3r`);
     }, ms);
   console.log(`Logged in as ${client.user.tag}!`);
   console.log('')
@@ -907,7 +907,7 @@ client.on('ready', function(){
 
 
 client.on('message', message => {
-var prefix = "#";
+var prefix = "-";
       if(message.content === prefix + "hchannel") {
       if(!message.channel.guild) return;
       if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply('You Dont Have Perms :x:');
@@ -919,10 +919,9 @@ var prefix = "#";
 });
 
 client.on('message',async Epic => {
-  var prefix = "#" ;
+  var prefix = "-" ;
   if(Epic.content.startsWith(prefix + "vonline")) {
   if(!Epic.guild.member(Epic.author).hasPermissions('MANAGE_CHANNELS')) return Epic.reply(':x: **I Dont Have Permissions**');
-    message.channel.send('✅| **تم عمل الروم بنجاح**');
   if(!Epic.guild.member(client.user).hasPermissions(['MANAGE_CHANNELS','MANAGE_ROLES_OR_PERMISSIONS'])) return Epic.reply(':x: **You Dont Have Permissions**');
   Epic.guild.createChannel(`Voice Online : [ ${Epic.guild.members.filter(m => m.voiceChannel).size} ]` , 'voice').then(c => {
     console.log(`Voice Online Is Activation In ${Epic.guild.name}`);
@@ -1834,7 +1833,7 @@ client.on('voiceStateUpdate', (voiceOld, voiceNew) => {
 
 
 client.on("message", msg => {
-  if(msg.content === '#' + "id") {
+  if(msg.content === '-' + "id") {
       const embed = new Discord.RichEmbed();
   embed.addField("🔱| اسم الحساب :", `${msg.author.username}#${msg.author.discriminator}`, true)
           .addField("🆔| الاي دي :", `${msg.author.id}`, true)
@@ -2084,7 +2083,7 @@ client.on("guildMemberAdd", member => {
 
 
 client.on('message', message => {
-var prefix = "#";
+var prefix = "-";
        if(message.content === prefix + "mutechannel") {
                            if(!message.channel.guild) return message.reply('** This command only for servers**');
 
@@ -2235,9 +2234,9 @@ if(!m1) return message.reply(`**الأيدي هذا غير صحيح \`${attentio
       message.channel.send(`**هل تريد إرسال في روم <#${attentions[message.guild.id]['id']}>
 ${attentions[message.guild.id]['msg']}**`).then(msge => {
       msge.react('✅').then( r => {
-      msge.react(':556187731231768577:')
+      msge.react('❌')
       const oneFilterBB = (reaction, user) => reaction.emoji.name === '✅' && user.id === message.author.id;
-      const threeFilterBB = (reaction, user) => reaction.emoji.name === ':556187731231768577:' && user.id === message.author.id;
+      const threeFilterBB = (reaction, user) => reaction.emoji.name === '❌' && user.id === message.author.id;
       const oneBY = msge.createReactionCollector(oneFilterBB, {maxMatches : 1,time : 400000,});
       const threeBY = msge.createReactionCollector(threeFilterBB, {maxMatches : 1,time : 400000,});
       oneBY.on('collect', r => {
@@ -3049,7 +3048,7 @@ client.on('message' , message => {
     ;
     let user = message.mentions.users.first()|| client.users.get(message.content.split(' ')[1])
     if(message.content.startsWith(prefix + 'unban')) {
-        if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send(':556187731231768577:|**\`ADMINISTRATOR\`لا توجد لديك رتبة`**');
+        if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('❌|**\`ADMINISTRATOR\`لا توجد لديك رتبة`**');
         if(!user) return  message.channel.send(`Do this ${prefix} <@ID user> \n or \n ${prefix}unban ID user`);
         message.guild.unban(user);
         message.guild.owner.send(`لقد تم فك الباند عن الشخص \n ${user} \n By : <@${message.author.id}>`)
@@ -3092,7 +3091,7 @@ client.on('typingStart', (ch, user) => {
    
    client.on('message', message => {
      if(!message.channel.guild) return;
-var prefix = "#";
+var prefix = "-";
                 if(message.content.startsWith(prefix + 'allbots')) {
 
     
@@ -3113,7 +3112,7 @@ message.channel.send(embed)
 });
    
    client.on('message', message => {
-	var prefix = "#";
+	var prefix = "-";
     if(message.content.startsWith(prefix + 'mvall')) {
      if (!message.member.hasPermission("MOVE_MEMBERS")) return message.channel.send('**:x: You Dont Have Perms `MOVE_MEMBERS`**');
        if(!message.guild.member(client.user).hasPermission("MOVE_MEMBERS")) return message.reply("**:x: I Dont Have Perms `MOVE_MEMBERS`**");
@@ -3130,7 +3129,7 @@ message.channel.send(embed)
        });
    
    client.on('message' , message => {
-  var prefix = "#";
+  var prefix = "-";
   if(message.author.bot) return;
  
   if(message.content.startsWith(prefix + "xo")) {
@@ -3195,7 +3194,7 @@ message.channel.send(embed)
  });
    
    client.on('message', msg => {
-	var  prefix = "#";
+	var  prefix = "-";
  if (msg.content.startsWith(prefix + 'cal')) {
     let args = msg.content.split(" ").slice(1);
         const question = args.join(' ');
@@ -3217,7 +3216,7 @@ message.channel.send(embed)
 });
    
    client.on('message', omar => {
-var prefix = "#";
+var prefix = "-";
 if(omar.content.split(' ')[0] == prefix + 'dc') {  
 if (!omar.channel.guild) return;
 if(!omar.guild.member(omar.author).hasPermission("MANAGE_CHANNELS")) return omar.reply("**You Don't Have ` MANAGE_CHANNELS ` Permission**");
@@ -3617,7 +3616,7 @@ client.on('message', message => {
 
 
   client.on("message", function(message) {
-    var prefix = "#";
+    var prefix = "-";
    if(message.content.startsWith(prefix + "help")) {
     let messageArgs = message.content.split(" ").slice(1).join(" ");
     let messageRPS = message.content.split(" ").slice(2).join(" ");
@@ -3626,10 +3625,10 @@ client.on('message', message => {
     var RpsEmbed = new Discord.RichEmbed()
     .setAuthor(message.author.username)
     .setThumbnail(message.author.avatarURL)
-    .addField("Puplic | عامه","👥",false)
+    .addField("Puplic | عامه","👥",true)
     .addField("Admin | ادمنيه","👑",true)
-    .addField("Games | العاب","🎮",false)
-        .addField("BotRooms | رومات البوت","🤖",false)
+    .addField("Games | العاب","🎮",true)
+        .addField("BotRooms | رومات البوت","🤖",true)
     message.channel.send(RpsEmbed).then(msg => {
         msg.react('👥')
         msg.react("👑")
@@ -3653,10 +3652,36 @@ reaction1.on("collect", r => {
       .setThumbnail('https://images-ext-2.discordapp.net/external/JD7xvknBVacXHoC2re78AtJN4PUY5IjUZy1uWIqzObI/https/s3.amazonaws.com/eclincher.wp.upload/wp-content/uploads/2015/08/25155834/people-icon.png')
       .setColor("#000000")
       .setDescription(`
-      :busts_in_silhouette:***__ArtBot pirme__***:loudspeaker: 
+      :busts_in_silhouette:***__اوامر عامة__***:loudspeaker: 
 **
+『-ping ====> لمعرفة سرعة اتصال البوت
+『-link ====> يسويلك رابط لمدة يوم وعدد الاستخدامات 100
+『-tag ====> لعرض الكلام بشكل جميل و كبير
+『-تقديم
+『-quran ====> لعرض 200 صفحة من القرآن الكريم
+『-perms ====> لعرض صلاحياتك
+『-topinv ====> لعرض صاحب اكثر دعوات 
+『-hypixel ====> لرؤية احصائياتك في هايبكسل
+『-contact ====> للتواصل مع صاحب البوت
+『-clan ====> لعبة الكلانات
+『-report ====> للابلاغ عن احد
+『-Minv ====> لمعرفة عدد دعواتك
+『-color ====> لوضع لون لك
+『-emojilist ====> لرؤية قائمة اموجيات السيرفر
+『-date ====> يعرضلك تاريخ اليوم
+『-email ====> يعطيك ايميل و باس عشوائي
+『-gRole Role name ====> يوريك معلومات رتبة باسمها او الايدي حقها
+『-bot ====> يعرض لك كل معلومات البوت
+『-say ====> يكرر الكلام الي تكتبو
+『-savatar ====> صورة السيرفر
+『-id ====> معلومات عنك
+『-new ====> يفتح لك تكت
+『-avatar ====> صورتك او صورة الي تمنشنو
+『-embed ====> يكرر الي تقولو بشكل حلو
+『-rules ====> يعرض لك قوانين السيرفر
+『-v2min ====> لصنع روم صوتي مؤقت
 『-inv ====> لدعوة البوت الى سيرفرك
-『 By ====> RKS | F_L_S_T_I_N#7302
+『 By ====> WESO#0001
 **
 `)
    message.author.sendEmbed(embed)
@@ -3667,20 +3692,54 @@ reaction2.on("collect", r => {
   .setThumbnail('https://cdn.discordapp.com/attachments/553862087382925313/556036868492230667/logo-admin-png-4.png')
       .setColor("#000000")
       .setDescription(`
-      :key:***__ArtBot Prime admin __***:crown: 
+      :key:***__اوامر ادارية__***:crown: 
 **
-『#setMedia ====> لتحديد روم الصور
-『#setmember ====> لعمل روم صوتي بعدد اعضاء السيرفر
-『#vonline ====> لعمل روم صوتي اونلاين
-『#schannel ====> اضهار الشات المخفية
-『#sr Exemple ====> لتغيير اسم السيرفر
-『#hchannel ====> اخفاء الشات
-『#role @mention rolename ====> لأعطاء رتبة لعضو معين
-『#role all rolename ====> لأعطاء رتبة للجميع
-『#mutechannel ====> تقفيل الشات
-『#unmutechannel ====> فتح الشات
-『 Help bot link 
-https://discordapp.com/api/oauth2/authorize?client_id=622777290211721236&permissions=0&scope=bot
+『-bc ====> رسالة لجميع اعضاء السيرفر
+『-bk ====> رسالة لجميع اعضاء السيرفر 2
+『-rolebc ====> رسالة لرتبة معينة
+『-setbot ====> لعمل روم صوتي بعدد البوتات في السيرفر
+『-bans ====> الاعضاء المبندين من سيرفرك
+『-setmember ====> لعمل روم صوتي بعدد اعضاء السيرفر
+『-cto ====> تغير الكلام في اعلى الروم
+『-leave ====> لطرد البوت من سيرفرك
+『-setMedia ====> لتحديد روم الصور
+『-ranks ====> يوريك رتب السيرفر
+『-vonline ====> لعمل روم صوتي اونلاين
+『-schannel ====> اضهار الشات المخفية
+『-sr Exemple ====> لتغيير اسم السيرفر
+『-kv ====> لطرد عضو من روم صوتي
+『-hchannel ====> اخفاء الشات
+『-talk ====> للتكلم بصفة البوت
+『-count ====> عدد اعضاء السيرفر
+『-setlog ====> لصنع روم اللوج
+『-server ====> يعرض لك معلومات عن السيرفر
+『-movall ====> لسحب الجميع الى رومك
+『-sug ====> suggestions لصنع اقتراح لازم روم 
+『-bs ====> لمعرفة سيرفرات البوت
+『-rooms ====> لرؤية رومات السيرفر
+『-dc ====> مسح كل الرومات
+『-dr ====>  فوق كل الرانكات
+『-allbots ====> يوريك كل البوتات في سيرفرك
+『-move ====> لسحب عضو الى روم صوتية
+『-giveaway ====> لصنع جيفواي
+『-role @mention rolename ====> لأعطاء رتبة لعضو معين
+『-role all rolename ====> لأعطاء رتبة للجميع
+『-role humans rolename ====> لأعطاء رتبة للاشخاص فقط
+『-role bots rolename ====> لأعطاء رتبة لجميع البوتات
+『-members ====> حالات اعضاء السيرفر
+『-send ====> ارسال رسالة لشخص المنشن
+『-clr <numbr> ====> مسح الشات بعدد
+『-clear ====> مسح الشات
+『-mute @user <reason> ====> اعطاء العضو ميوت لازم رتبة <Muted>
+『-unmute @user ====> لفك الميوت عن الشخص 
+『-kick @user <reason> ====> طرد الشخص من السيرفر
+『-ban @user <reason> ====> حضر الشخص من السيرفر
+『-unban @user ====> لفك حضر الشخص من السيرفر
+『-mutechannel ====> تقفيل الشات
+『-unmutechannel ====> فتح الشات
+『-ct <name> ====> انشاء شات
+『-cv <name> ====> انشاء رووم فويس
+『 By ====> WESO#0001
 **
 `)
    message.author.sendEmbed(embed)
@@ -3691,9 +3750,34 @@ reaction3.on("collect", r => {
   .setThumbnail('https://images-ext-1.discordapp.net/external/4IGqoA1bqVqu_o2I-jY51fqJFy2S8f8NrzcnzxhFtVU/http/reli.sh/wp-content/themes/relish/assets/img/services/icon-games.png')
       .setColor("#000000")
       .setDescription(`
-       :video_game: ***__ArtBot pirme__***:game_die:
+       :video_game: ***__اوامر العاب__***:game_die:
  **       
-『 By ====> RKS | F_L_S_T_I_N#7302
+『-8ball ====> لعبه تسال البوت اسال  وهو يجاوب عنها
+『-cuttweet ====> لعبة كت تويت
+『-هل تعلم
+『-cal ====> ألة حاسبة
+『-za5 ====> لزخرفة ما تقول
+『-cats ====> قطط كيوت
+『-love ====> يعطيك اقوال عن الحب 
+『-حكم
+『-جمع
+『-طرح
+『-ضرب
+『-فواكه
+『-فكك
+『-sara7a ====> لعبة صراحة
+『-roll ====> قرعة
+『-xo ====> xo لعبة 
+『-نكت مضحكه ====> نكت
+『-kiss ====> ما يحتاج شرح ههههه
+『-marry ====> لعبة الزواج
+『-hack ====> لعبه هاك
+『-kill ====> لعبة قتل
+『-quas ====> اسئلة عامة
+『-لعبة مريم ====> مريم
+『-عواصم
+『-يعطيك عقابات قاسية ====> عقاب
+『 By ====> WESO#0001
 `)
    message.author.sendEmbed(embed)
    message.reply('تم ارسالك بلخاص')
@@ -4009,19 +4093,19 @@ return;
 
  client.on('message', message => {
   if(!message.channel.guild) return;
-if(message.content.startsWith('#bc')) {
+if(message.content.startsWith('-bc')) {
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
 if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
 let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
-let copy = "ArtBot Pirme";
+let copy = "ScrpitBot";
 let request = `Requested By ${message.author.username}`;
 if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
 msg.react('✅')
-.then(() => msg.react(':556187731231768577:'))
+.then(() => msg.react('❌'))
 .then(() =>msg.react('✅'))
 
 let reaction1Filter = (reaction, user) => reaction.emoji.name === '✅' && user.id === message.author.id;
-let reaction2Filter = (reaction, user) => reaction.emoji.name === ':556187731231768577:' && user.id === message.author.id;
+let reaction2Filter = (reaction, user) => reaction.emoji.name === '❌' && user.id === message.author.id;
 let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
 let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
 reaction1.on("collect", r => {
